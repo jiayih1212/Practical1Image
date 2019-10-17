@@ -39,38 +39,41 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun countUp() {
-        Toast.makeText(this, "button clicked",
-            Toast.LENGTH_SHORT).show()
+        Toast.makeText(
+            this, "button clicked",
+            Toast.LENGTH_SHORT
+        ).show()
 
         val resultText: TextView = findViewById(R.id.result_text)
         val resultText1: TextView = findViewById(R.id.result_text1)
         val resultText2: TextView = findViewById(R.id.result_text2)
 
-        if(resultText.text == "Hello World!") {
+        if (resultText.text == "Hello World!") {
             resultText.text = "Counted Up!"
-            resultText.text= "1"
-            resultText1.text= "1"
-            resultText2.text= "1"
+            resultText.text = "1"
+            resultText1.text = "1"
+            resultText2.text = "1"
+        }
 
-        }else if(resultText.text != "6") {
-            val ans = resultText.text.toString().toInt()+1
-            val ans1 = resultText1.text.toString().toInt()+1
-            val ans2 = resultText2.text.toString().toInt()+1
-
+        if (resultText.text != "6") {
+            val ans = resultText.text.toString().toInt() + 1
             resultText.text = "Counted Up!"
             resultText.text = ans.toString()
+        }
 
+        if (resultText1.text != "6") {
+            val ans1 = resultText1.text.toString().toInt() + 1
             resultText1.text = "Counted Up!"
             resultText1.text = ans1.toString()
+        }
 
+        if (resultText2.text != "6"){
+            val ans2 = resultText2.text.toString().toInt() + 1
             resultText2.text = "Counted Up!"
             resultText2.text = ans2.toString()
 
-        }else{
-            resultText.text = "Reached Maximum 6!"
-            resultText1.text = "Reached Maximum 6!"
-            resultText2.text = "Reached Maximum 6!"
         }
+
 
     }
 }

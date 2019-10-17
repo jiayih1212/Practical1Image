@@ -54,8 +54,8 @@ class MainActivity : AppCompatActivity() {
 
         }else if(resultText.text != "6") {
             val ans = resultText.text.toString().toInt()+1
-            val ans1 = resultText.text.toString().toInt()+1
-            val ans2 = resultText.text.toString().toInt()+1
+            val ans1 = resultText1.text.toString().toInt()+1
+            val ans2 = resultText2.text.toString().toInt()+1
 
             resultText.text = "Counted Up!"
             resultText.text = ans.toString()

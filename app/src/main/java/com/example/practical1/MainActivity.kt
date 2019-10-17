@@ -23,9 +23,17 @@ class MainActivity : AppCompatActivity() {
             Toast.LENGTH_SHORT).show()
 
         val resultText: TextView = findViewById(R.id.result_text)
+        val resultText1: TextView = findViewById(R.id.result_text1)
+        val resultText2: TextView = findViewById(R.id.result_text2)
         resultText.text = "Dice Rolled!"
 
         val randomInt = Random().nextInt(6) + 1
         resultText.text = randomInt.toString()
+
+        val randomInt1 = Random().nextInt(6) + 1
+        resultText1.text = randomInt1.toString()
+
+        val randomInt2 = Random().nextInt(6) + 1
+        resultText2.text = randomInt2.toString()
     }
 }

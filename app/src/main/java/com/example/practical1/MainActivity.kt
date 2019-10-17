@@ -15,7 +15,8 @@ class MainActivity : AppCompatActivity() {
 
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener { rollDice() }
-
+        val countUpButton: Button = findViewById<Button>(R.id.countUp_button)
+        countUpButton.setOnClickListener { countUp() }
     }
 
     private fun rollDice() {
@@ -35,5 +36,41 @@ class MainActivity : AppCompatActivity() {
 
         val randomInt2 = Random().nextInt(6) + 1
         resultText2.text = randomInt2.toString()
+    }
+
+    private fun countUp() {
+        Toast.makeText(this, "button clicked",
+            Toast.LENGTH_SHORT).show()
+
+        val resultText: TextView = findViewById(R.id.result_text)
+        val resultText1: TextView = findViewById(R.id.result_text1)
+        val resultText2: TextView = findViewById(R.id.result_text2)
+
+        if(resultText.text == "Hello World!") {
+            resultText.text = "Counted Up!"
+            resultText.text= "1"
+            resultText1.text= "1"
+            resultText2.text= "1"
+
+        }else if(resultText.text != "6") {
+            val ans = resultText.text.toString().toInt()+1
+            val ans1 = resultText.text.toString().toInt()+1
+            val ans2 = resultText.text.toString().toInt()+1
+
+            resultText.text = "Counted Up!"
+            resultText.text = ans.toString()
+
+            resultText1.text = "Counted Up!"
+            resultText1.text = ans1.toString()
+
+            resultText2.text = "Counted Up!"
+            resultText2.text = ans2.toString()
+
+        }else{
+            resultText.text = "Reached Maximum 6!"
+            resultText1.text = "Reached Maximum 6!"
+            resultText2.text = "Reached Maximum 6!"
+        }
+
     }
 }

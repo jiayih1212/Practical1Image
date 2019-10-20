@@ -48,11 +48,11 @@
         android:text="@string/countup" />
 
     <Button
-    android:id="@+id/reset_button"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal"
-    android:text="@string/reset" />
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/reset" />
 
 </LinearLayout>
 

@@ -2,4 +2,5 @@
     <string name="app_name">Practical1</string>
     <string name="roll_label">Roll</string>
     <string name="countup">CountUp</string>
+    <string name="reset">reset</string>
 </resources>

@@ -15,17 +15,32 @@ class MainActivity : AppCompatActivity() {
 
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener { rollDice() }
+
         val countUpButton: Button = findViewById<Button>(R.id.countUp_button)
         countUpButton.setOnClickListener { countUp() }
+
+        val resetButton: Button = findViewById<Button>(R.id.reset_button)
+        resetButton.setOnClickListener { reset() }
+    }
+
+    val resultText: TextView = findViewById(R.id.result_text)
+    val resultText1: TextView = findViewById(R.id.result_text1)
+    val resultText2: TextView = findViewById(R.id.result_text2)
+
+    private fun reset(){
+        Toast.makeText(this, "Reset button clicked",
+            Toast.LENGTH_SHORT).show()
+
+        resultText.text = "0"
+        resultText1.text = "0"
+        resultText2.text = "0"
+
     }
 
     private fun rollDice() {
-        Toast.makeText(this, "button clicked",
+        Toast.makeText(this, "Roll Dice button clicked",
             Toast.LENGTH_SHORT).show()
 
-        val resultText: TextView = findViewById(R.id.result_text)
-        val resultText1: TextView = findViewById(R.id.result_text1)
-        val resultText2: TextView = findViewById(R.id.result_text2)
         resultText.text = "Dice Rolled!"
 
         val randomInt = Random().nextInt(6) + 1
@@ -40,13 +55,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun countUp() {
         Toast.makeText(
-            this, "button clicked",
+            this, "Count Up button clicked",
             Toast.LENGTH_SHORT
         ).show()
-
-        val resultText: TextView = findViewById(R.id.result_text)
-        val resultText1: TextView = findViewById(R.id.result_text1)
-        val resultText2: TextView = findViewById(R.id.result_text2)
 
         if (resultText.text == "Hello World!") {
             resultText.text = "Counted Up!"
